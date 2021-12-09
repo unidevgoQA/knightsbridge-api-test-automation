@@ -4,7 +4,8 @@ from api.common_api import Api
 from test_data.reset_password.data import reset_email_credentials
 from test_data.reset_password.data import \
     reset_user_data_only_email,\
-    reset_email_with_code
+    reset_email_with_code,\
+    new_password
 from utils.email_reader import get_otp_from_email
 
 
@@ -15,6 +16,9 @@ def test_reset_password_new_successful():
     reset_new_password_api = Api("api/users/reset-password/new")
     forgot_api.post_request(reset_user_data_only_email)
     sleep(30)
-    payload = reset_email_with_code['code'] = get_otp_from_email(reset_email_credentials)
-    reset_response = reset_api.send(payload)
-    reset_response['status_code'] = 201
+    reset_email_with_code['code'] = get_otp_from_email(reset_email_credentials)
+    reset_response = reset_api.send(reset_email_with_code)
+    token = reset_response['response']['token']
+    payload = {"token": token, "password": new_password}
+    reset_password_response = reset_new_password_api.send(payload)
+    reset_password_response['status_code'] = 201

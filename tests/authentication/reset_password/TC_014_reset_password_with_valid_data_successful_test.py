@@ -14,6 +14,6 @@ def test_reset_password_successful():
     reset_api = Api("api/users/reset-password")
     forgot_api.post_request(reset_user_data_only_email)
     time.sleep(30)
-    payload = reset_email_with_code['code'] = get_otp_from_email(reset_email_credentials)
-    reset_response = reset_api.send(payload)
+    reset_email_with_code.update({"code": get_otp_from_email(reset_email_credentials)})
+    reset_response = reset_api.send(reset_email_with_code)
     reset_response['status_code'] = 201
