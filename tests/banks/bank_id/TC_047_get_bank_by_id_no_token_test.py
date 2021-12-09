@@ -1,7 +1,6 @@
 import allure
 from api.common_api import Api
 from test_data.bank_data.data import bank_id
-from test_data.headers import headers_with_token
 
 
 @allure.step("Verify that the user can not get bank by id with no token")
