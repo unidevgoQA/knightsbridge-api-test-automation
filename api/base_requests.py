@@ -38,8 +38,11 @@ class BaseApi(object):
                                 headers=headers)
         return self.get_response(response)
 
-    def delete_request(self):
-        response = requests.delete(self.url)
+    def delete_request(self, payload=None, headers=None):
+        if headers is None:
+            headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
+        response = requests.delete(self.url, data=json.dumps(payload),
+                                   headers=headers)
         return self.get_response(response)
 
     @staticmethod
