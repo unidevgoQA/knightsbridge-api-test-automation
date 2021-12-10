@@ -9,6 +9,7 @@ new_bank = {
 
 bank_id = "61996e25f613eb001c2258c0"
 bank_id_to_delete = "61996e25f613eb001c2258c2"
+invalid_bank_id = "61996e25f613easdf34fsdf"
 
 updated_bank_data = {
   "bankName": "updated test bank",

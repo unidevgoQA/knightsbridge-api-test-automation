@@ -1,7 +1,6 @@
 import requests
 import json
 from api.user_api import UserApi
-from test_data.user_data.data import valid_user_data
 from test_data.admin.data import admin_credentials
 from api.config import constData
 
