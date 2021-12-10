@@ -47,3 +47,6 @@ class BaseApi(object):
     @staticmethod
     def get_response(response):
         return {"status_code": response.status_code, "response": response.json()}
+
+    def __str__(self):
+        return self.url
