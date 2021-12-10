@@ -1,6 +1,8 @@
+from utils.read_update_counter import read_counter
+
 new_coin = {
   "image": "https://www.cryptocompare.com/media/12318076/xrp.png",
-  "realName": "test coin 1",
+  "realName": "test coin {}".format(read_counter()),
   "title": "test coin",
   "price": 12,
   "exchangeName": "test exchange",
@@ -13,6 +15,7 @@ new_coin = {
 coin_type = "testType"
 coin_id = "61b1d3de18ec7f2e0be39810"
 invalid_coin_id = "sdfadfaertersazdg"
+coin_id_to_update = "61b1d3ae18ec7f2e0be3980c"
 
 coins_get_all_params = {
   "coinType": "coinMarket",
