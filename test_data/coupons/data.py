@@ -3,8 +3,8 @@ from utils.read_update_counter import read_counter
 new_coupon = {
   "discountPercentage": 0,
   "title": "Test Coupon",
-  "startDate": "12 Dec 2021",
-  "endDate": "20 Dec 2021",
+  "startDate": "2019-09-07",
+  "endDate": "2020-09-07",
   "forAllCoins": True,
   "coinId": "111",
   "image": "https://www.cryptocompare.com/media/12318076/xrp.png",
@@ -14,7 +14,7 @@ new_coupon = {
 
 create_invalid_coupon = {
   "discountPercentage": 0,
-  "title":"",
+  "title": "",
   "startDate": "12 Dec 2021",
   "endDate": "20 Dec 2021",
   "forAllCoins": True,
@@ -59,3 +59,40 @@ update_coupon_data = {
   "code": "TC111",
   "noOfReedem": 0
 }
+
+coupon_create_only_title = {
+  "title": "Test1 Coupon"
+}
+
+coupon_create_only_discountPercentage = {
+  "discountPercentage": 10
+}
+
+coupon_create_only_startDate = {
+  "startDate": "7 Dec 2021"
+}
+
+coupon_create_only_endDate = {
+  "endDate": "7 Dec 2021"
+}
+
+coupon_create_only_forAllCoins = {
+  "forAllCoins": True
+}
+
+coupon_create_only_coinId = {
+  "coinId": "4521"
+}
+
+coupon_create_only_image = {
+  "image": "https://www.cryptocompare.com/media/12318076/xrp.png"
+}
+
+coupon_create_only_code = {
+  "code": "4444"
+}
+
+coupon_create_only_noOfReedem = {
+  "noOfReedem": 10
+}
+
