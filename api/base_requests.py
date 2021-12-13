@@ -44,6 +44,15 @@ class BaseApi(object):
         response = requests.request('DELETE', self.url, headers=headers)
         return self.get_response(response)
 
+    def patch_request(self, payload=None, headers=None):
+        if headers is None:
+            headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
+        if payload is None:
+            response = requests.request("PATCH", self.url, headers=headers)
+        else:
+            response = requests.request("PATCH", self.url, data=json.dumps(payload), headers=headers)
+        return self.get_response(response)
+
     @staticmethod
     def get_response(response):
         return {"status_code": response.status_code, "response": response.json()}

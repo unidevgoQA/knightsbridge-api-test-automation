@@ -12,3 +12,6 @@ class Api(BaseApi):
 
     def get_request_status(self, payload=None, headers=None):
         return requests.request("GET", self.url, params=payload, headers=headers)
+
+    def patch_request_custom(self, payload=None, headers=None):
+        return requests.request("PATCH", self.url, params=payload, headers=headers)

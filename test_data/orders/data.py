@@ -28,3 +28,12 @@ get_all_orders_data = {
     "pageSize": "1",
     "pageNumber": "1",
 }
+
+user_id = "6196b1eb973d8bd3a40ec126"
+user_id_invalid = "6196b1eb973d8bd3a40ec12"
+
+order_status = {
+  "status": "In Review"
+}
+
+order_id = '61b33ea410c10f0027c5e829'
