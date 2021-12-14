@@ -15,3 +15,10 @@ exist_wallet = {
   "quantity": 1,
   "reservedQuantity": 1
 }
+
+update_crypto_wallet_data = {
+  "userId": already_exists_user_id_in_crypto_wallet,
+  "coinId": "61b1d3de18ec7f2e0be39810",
+  "quantity": 5,
+  "reservedQuantity": 2
+}
