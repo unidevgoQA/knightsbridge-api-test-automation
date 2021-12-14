@@ -22,3 +22,10 @@ update_crypto_wallet_data = {
   "quantity": 5,
   "reservedQuantity": 2
 }
+
+crypto_wallet_id = "61a94aaa8df9eb001c195ef4"
+
+retrieve_by_uid_coin_id_data = {
+  "userId": already_exists_user_id_in_crypto_wallet,
+  "coinId": "61b1d3de18ec7f2e0be39810",
+}
