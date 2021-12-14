@@ -11,8 +11,8 @@ def get_token():
     headers = {'Content-Type': 'application/json'}
     response = requests.request("POST", url, headers=headers, data=payload)
     body = response.json()
-    token = body['token']
-    return token
+    token, user_id = body['token'], body['id']
+    return token, user_id
 
 
 def get_admin_token():
@@ -26,7 +26,7 @@ def get_admin_token():
     return user_id, token
 
 
-user_token = get_token()
+user_token = get_token()[0]
 admin_token = get_admin_token()[1]
 admin_id = get_admin_token()[0]
-
+user_id = get_token()[1]

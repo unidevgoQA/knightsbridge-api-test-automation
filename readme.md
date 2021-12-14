@@ -1,6 +1,6 @@
 # KNIGHTSBRIDGE API TESTING
 
-This project is a starting point for `GOOEY` API testing.
+This project is a starting point for `KNIGHTSBRIDGE` API testing.
 
 ### API Routes:
 

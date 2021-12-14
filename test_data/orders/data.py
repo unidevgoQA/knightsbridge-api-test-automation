@@ -36,4 +36,10 @@ order_status = {
   "status": "In Review"
 }
 
+approve_data = {
+  "fee": 1,
+  "quantity": 2,
+  "unitCoinPrice": 3
+}
+
 order_id = '61b33ea410c10f0027c5e829'

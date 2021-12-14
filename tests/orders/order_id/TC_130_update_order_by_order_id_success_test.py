@@ -8,6 +8,6 @@ from test_data.headers import admin_headers_with_token
 def test_update_order():
     api_endpoint = "order/orderId/{}".format(order_id)
     order_api = Api(api_endpoint)
-    result = order_api.patch_request_custom(payload=order_status, headers=admin_headers_with_token)
-    status_code = result.status_code
+    result = order_api.patch_request(payload=order_status, headers=admin_headers_with_token)
+    status_code = result['status_code']
     assert status_code == 200
