@@ -7,6 +7,9 @@ from test_data.get_token import user_id
 
 @allure.step("Update crypto wallet by user id in path success test")
 def test_update_crypto_wallet():
+    crypto_api = Api("cryptoWallet/get-all")
+    result = crypto_api.get_request(headers=admin_headers_with_token)
+    a_wallet = result['response']['data']
     api_endpoint = "cryptoWallet/update/{}".format(user_id)
     crypto_api = Api(api_endpoint)
     result = crypto_api.put_request(payload=update_crypto_wallet_data,
