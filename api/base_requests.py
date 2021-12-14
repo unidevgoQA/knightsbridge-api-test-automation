@@ -34,8 +34,10 @@ class BaseApi(object):
     def put_request(self, payload=None, headers=None):
         if headers is None:
             headers = {'Accept': 'application/json', 'Content-Type': 'application/json'}
-        response = requests.put(self.url, data=json.dumps(payload) if payload else None,
-                                headers=headers)
+        if payload is None:
+            response = requests.request("PUT", self.url, headers=headers)
+        else:
+            response = requests.request("PUT", self.url, data=json.dumps(payload), headers=headers)
         return self.get_response(response)
 
     def delete_request(self, headers=None):
