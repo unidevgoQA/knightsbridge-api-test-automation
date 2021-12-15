@@ -5,3 +5,5 @@ new_fiat_wallet_data = {
   "fiatAmount": 100,
   "reservedAmount": 50
 }
+
+fiat_wallet_id = '61ab37b42868e900116ed83e'
