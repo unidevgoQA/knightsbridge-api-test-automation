@@ -19,3 +19,5 @@ fiat_wallet_update_data = {
   "fiatAmount": 4,
   "reservedAmount": 1
 }
+
+fiat_wallet_user_id = random_user_id
