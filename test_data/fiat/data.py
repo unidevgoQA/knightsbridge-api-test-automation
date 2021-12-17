@@ -31,11 +31,12 @@ update_fiat = {
 }
 
 status = "Pending"
+confirmed_status = "Confirmed"
 
 fiat_id = '61bc16a34a4be9001c58c726'
 
 fiat_withdraw = {
-  "amount": 10,
+  "amount": 5,
   "userId": "string",
   "paymentMethod": "string",
   "currency": "string",
@@ -47,3 +48,13 @@ fiat_withdraw = {
   "accountNumber": "string"
 }
 
+admin_deposit = {
+  "amount": 100,
+  "currency": "testCurrency",
+  "paymentMethod": "NAS",
+  "userId": "testadminuserid{}".format(counter_reading),
+  "depositedBy": "admin",
+  "exchangeRate": 5
+}
+
+user_id = "testuserid{}".format(counter_reading)
