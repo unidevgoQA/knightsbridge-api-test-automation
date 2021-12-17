@@ -26,3 +26,10 @@ fiat_search = {
     "userId": new_deposit["userId"],
 }
 
+update_fiat = {
+    "exchangeRate": 6
+}
+
+status = "Pending"
+
+fiat_id = '61bc16a34a4be9001c58c726'
