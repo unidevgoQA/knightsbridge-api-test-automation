@@ -33,3 +33,17 @@ update_fiat = {
 status = "Pending"
 
 fiat_id = '61bc16a34a4be9001c58c726'
+
+fiat_withdraw = {
+  "amount": 10,
+  "userId": "string",
+  "paymentMethod": "string",
+  "currency": "string",
+  "expectedPaymentDate": "{}T05:10:28.696Z".format(today),
+  "bankName": "string",
+  "title": "string",
+  "country": "string",
+  "swiftCode": "string",
+  "accountNumber": "string"
+}
+
