@@ -1,4 +1,13 @@
+from random import choice
+from api.common_api import Api
+from test_data.headers import admin_headers_with_token
 from utils.read_update_counter import read_counter
+
+counter_reading = read_counter()
+
+api = Api('coin/get-all')
+result = api.get_request(headers=admin_headers_with_token)
+random_coin_id = choice(result['response']['data'])['_id']
 
 new_coin = {
   "image": "https://www.cryptocompare.com/media/12318076/xrp.png",
@@ -19,7 +28,7 @@ coin_id_to_update = "61b1d3ae18ec7f2e0be3980c"
 
 coins_get_all_params = {
   "coinType": "coinMarket",
-  "isActive": "true"
+  "isActive": "false"
 }
 
 coins_no_type = {

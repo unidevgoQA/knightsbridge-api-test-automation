@@ -10,5 +10,5 @@ def test_delete_bank_by_invalid_id():
     delete_api_endpoint = "bank/{}".format(invalid_bank_id)
     delete_api = Api(delete_api_endpoint)
     delete_result = delete_api.delete_request(headers=admin_headers_with_token)
-    status_code = delete_result['status_code']
-    assert status_code == 500
+    message = delete_result['response']['message']
+    assert message == "Internal server error"

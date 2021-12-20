@@ -9,5 +9,5 @@ def test_get_coin_by_invalid_id():
     coin_id_endpoint = "coin/{}".format(invalid_coin_id)
     coin_api = Api(coin_id_endpoint)
     result = coin_api.get_request(headers=headers_with_token)
-    status_code = result['status_code']
-    assert status_code == 500
+    message = result['response']['message']
+    assert message == 'Internal server error'

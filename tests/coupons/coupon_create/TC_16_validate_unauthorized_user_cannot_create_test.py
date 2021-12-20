@@ -8,4 +8,4 @@ def test_valid_coupon_create():
     coupon_api = Api("coupon/create")
     result = coupon_api.post_request(new_coupon)
     status_code = result['status_code']
-    assert status_code == 400
+    assert status_code == 401
