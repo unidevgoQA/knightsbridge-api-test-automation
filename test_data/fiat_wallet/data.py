@@ -20,4 +20,5 @@ fiat_wallet_update_data = {
   "reservedAmount": 1
 }
 
+# get random wallet user id to get rid of the chance of index out of range
 fiat_wallet_user_id = random_user_id
