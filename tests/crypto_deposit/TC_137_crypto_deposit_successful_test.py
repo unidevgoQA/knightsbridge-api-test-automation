@@ -11,5 +11,6 @@ def test_crypto_deposit():
     result = crypto_api.post_request(payload=new_crypto_deposit,
                                      headers=admin_headers_with_token)
     status_code = result['status_code']
-    assert status_code == 200
-
+    message = result['response']['message']
+    assert status_code == 201
+    assert "Internal server error" != message

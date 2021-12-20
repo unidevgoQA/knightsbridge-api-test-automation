@@ -10,3 +10,4 @@ def test_valid_bank_create():
     result = api.post_request(new_bank, headers=admin_headers_with_token)
     status_code = result['status_code']
     assert status_code == 201
+

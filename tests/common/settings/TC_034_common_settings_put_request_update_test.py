@@ -9,4 +9,4 @@ def test_common_settings_get_token_request():
     api = Api("common/settings")
     result = api.put_request(new_fee, headers=headers_with_token)
     status_code = result['status_code']
-    assert status_code == 200
+    assert status_code == 403

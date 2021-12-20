@@ -13,5 +13,5 @@ def test_resend_with_invalid_id():
     user_id = sign_in_result["response"]["id"]
     resend_id_api = Api(constData['RESEND_ID'].format(user_id+"1"))
     result = resend_id_api.get_request(headers=headers_with_token)
-    status_code = result['status_code']
-    assert status_code == 500
+    message = result["response"]["message"]
+    assert message == 'Internal server error'
