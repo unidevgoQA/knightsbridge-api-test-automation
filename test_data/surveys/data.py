@@ -47,3 +47,18 @@ filL_survey = {
     ]
 }
 
+update_survey_data = {
+  "surveyName": "Survey Name {}".format(counter_reading + 2),
+  "questions": [
+    {
+      "statement": "Do you like knightsBridge?",
+      "questionType": "check_box",
+      "options": [
+        "yes"
+      ]
+    }
+  ],
+  "isEmailRequired": True,
+  "startDate": read_date(),
+  "endDate": "2025-12-10"
+}
