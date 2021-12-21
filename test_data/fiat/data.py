@@ -6,17 +6,17 @@ counter_reading = read_counter()
 
 
 new_deposit = {
-    "depositDate": "{}.180Z".format(today),
-    "amount": 100,
-    "depositRefNo": "testrefinfo{}".format(counter_reading),
-    "receiptImage": "https://www.google.com/images/branding/""googlelogo/2x/googlelogo_color_272x92dp.png",
-    "currency": "NGN",
-    "paymentMethod": "Bank",
-    "status": "Approved",
-    "userId": "testuserid{}".format(counter_reading),
-    "bankId": "demobankid{}".format(counter_reading),
-    "adminBankId": "demoadminbankid{}".format(counter_reading),
-    "accTitle": "Test Account Title {}".format(counter_reading),
+  "depositDate": "2021-12-21T05:24:24.830Z",
+  "amount": 200,
+  "depositRefNo": "stringf{}".format(counter_reading),
+  "receiptImage": "string",
+  "currency": "string",
+  "paymentMethod": "string",
+  "status": "string",
+  "userId": "string",
+  "bankId": "string",
+  "adminBankId": "string",
+  "accTitle": "string"
 }
 
 fiat_search = {
@@ -30,7 +30,7 @@ update_fiat = {
     "exchangeRate": 6
 }
 
-status = "Pending"
+status = "Confirmed"
 confirmed_status = "Confirmed"
 
 fiat_id = '61bc16a34a4be9001c58c726'
@@ -49,12 +49,12 @@ fiat_withdraw = {
 }
 
 admin_deposit = {
-  "amount": 100,
-  "currency": "testCurrency",
-  "paymentMethod": "NAS",
-  "userId": "testadminuserid{}".format(counter_reading),
-  "depositedBy": "admin",
-  "exchangeRate": 5
+  "amount": 0,
+  "currency": "string",
+  "paymentMethod": "string",
+  "userId": "string",
+  "depositedBy": "string",
+  "exchangeRate": 0
 }
 
 user_id = "testuserid{}".format(counter_reading)

@@ -5,7 +5,7 @@ from test_data.headers import admin_headers_with_token
 
 
 @allure.step("Verify survey not add with get request")
-def test_add_surveys():
+def test_add_survey_by_get():
     api_endpoint = "survey/add"
     survey_api = Api(api_endpoint)
     result = survey_api.get_request(payload=new_survey, headers=admin_headers_with_token)

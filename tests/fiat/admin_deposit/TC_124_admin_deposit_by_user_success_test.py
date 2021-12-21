@@ -10,5 +10,5 @@ def test_admin_deposit():
     fiat_api = Api(api_endpoint)
     result = fiat_api.post_request(admin_deposit, headers=headers_with_token)
     status_code = result['status_code']
-    assert status_code == 403
+    assert status_code == 201
 

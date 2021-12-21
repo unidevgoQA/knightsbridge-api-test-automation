@@ -5,7 +5,7 @@ from test_data.headers import admin_headers_with_token
 
 
 @allure.step("Verify that user can create promotion successfully")
-def test_create_promotion():
+def test_create_promotion_success():
     promotion_api = Api("promotion/create")
     result = promotion_api.post_request(new_promotion_data, headers=admin_headers_with_token)
     status_code = result['status_code']

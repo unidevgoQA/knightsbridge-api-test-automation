@@ -1,8 +1,15 @@
-from utils.read_update_counter import read_counter
+from random import choice
+from api.common_api import Api
+from test_data.headers import admin_headers_with_token
+
+api = Api('coupon/getAll')
+result = api.get_request(headers=admin_headers_with_token)
+random_coupon_id = choice(result['response']['data'])['_id']
 
 new_coupon = {
   "discountPercentage": 0,
   "title": "Test Coupon",
+
   "startDate": "2019-09-07",
   "endDate": "2020-09-07",
   "forAllCoins": True,

@@ -9,5 +9,5 @@ def test_all_wallet_portfolio():
     api_endpoint = "portfolio/allWallet/{}".format(user_id_invalid)
     fiat_api = Api(api_endpoint)
     result = fiat_api.get_request(headers=headers_with_token)
-    status_code = result['status_code']
-    assert status_code == 404
+    wallet = result['response']['data']['cryptoWallet']
+    assert wallet == []

@@ -5,7 +5,7 @@ from test_data.headers import admin_headers_with_token
 
 
 @allure.step("Verify promotion deletes successfully by admin test")
-def test_promotion_deletes_by_id():
+def test_promotion_deletes_by_admin_id():
     """
     First create a promotion and then delete it.
     """

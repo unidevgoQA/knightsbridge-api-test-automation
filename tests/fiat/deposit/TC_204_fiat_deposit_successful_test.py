@@ -9,4 +9,4 @@ def test_deposit_money():
     deposit_api = Api("fiat/deposit")
     result = deposit_api.post_request(new_deposit, headers=admin_headers_with_token)
     status_code = result['status_code']
-    assert status_code == 200
+    assert status_code == 201

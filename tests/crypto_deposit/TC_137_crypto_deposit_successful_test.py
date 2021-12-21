@@ -13,4 +13,4 @@ def test_crypto_deposit():
     status_code = result['status_code']
     message = result['response']['message']
     assert status_code == 201
-    assert "Internal server error" != message
+    assert message != "Internal server error"

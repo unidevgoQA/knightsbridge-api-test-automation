@@ -5,7 +5,7 @@ from test_data.surveys.data import new_survey
 
 
 @allure.step("Verify that user can't add survey by non-admin user")
-def test_add_surveys():
+def test_add_survey_by_user():
     api_endpoint = "survey/add"
     survey_api = Api(api_endpoint)
     result = survey_api.post_request(payload=new_survey,

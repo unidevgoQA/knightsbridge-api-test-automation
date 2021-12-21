@@ -1,4 +1,11 @@
 from utils.read_update_counter import read_counter
+from random import choice
+from api.common_api import Api
+from test_data.headers import admin_headers_with_token
+
+api = Api('coupon/getAll')
+result = api.get_request(headers=admin_headers_with_token)
+random_crypto_wallet_id = choice(result['response']['data'])['_id']
 
 new_crypto_wallet = {
   "userId": "0152123997001705569764{}".format(read_counter()),

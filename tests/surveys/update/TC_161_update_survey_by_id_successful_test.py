@@ -5,7 +5,7 @@ from test_data.surveys.data import random_survey_id, update_survey_data
 
 
 @allure.step("Verify that the survey is updated successfully")
-def test_update_path_survey():
+def test_update_path_survey_id():
     api_endpoint = "survey/update/{}".format(random_survey_id)
     survey_api = Api(api_endpoint)
     result = survey_api.put_request(payload=update_survey_data,

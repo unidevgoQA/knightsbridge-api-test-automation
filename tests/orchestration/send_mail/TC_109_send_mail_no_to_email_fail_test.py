@@ -7,5 +7,5 @@ from test_data.orchestration.data import mail_data_empty_to
 def test_send_mail_without_to():
     orchestration_api = Api("sendMail")
     result = orchestration_api.post_request(payload=mail_data_empty_to)
-    status_code = result['status_code']
-    assert status_code == 500
+    message = result['response']['message']
+    assert message == "Internal server error"

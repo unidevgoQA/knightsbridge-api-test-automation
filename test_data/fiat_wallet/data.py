@@ -5,6 +5,7 @@ from test_data.headers import admin_headers_with_token
 api = Api('fiatWallet/get-all')
 result = api.get_request(headers=admin_headers_with_token)
 random_user_id = choice(result['response']['data'])['userId']
+random_fiat_wallet_id = choice(result['response']['data'])['_id']
 
 new_fiat_wallet_data = {
   "userId": "0152123997001705569764",

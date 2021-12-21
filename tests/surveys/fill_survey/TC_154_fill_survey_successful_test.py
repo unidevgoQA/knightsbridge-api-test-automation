@@ -5,7 +5,7 @@ from test_data.surveys.data import random_survey_id, filL_survey
 
 
 @allure.step("Verify that the survey is filled successfully")
-def test_fill_survey():
+def test_fill_survey_success():
     api_endpoint = "survey/submit/{}".format(random_survey_id)
     survey_api = Api(api_endpoint)
     result = survey_api.post_request(payload=filL_survey,

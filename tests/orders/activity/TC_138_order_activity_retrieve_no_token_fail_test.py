@@ -3,7 +3,7 @@ from api.common_api import Api
 
 
 @allure.step("Validate retrieve order successfully")
-def test_approve_order_no_token():
+def test_retrieve_order():
     api_endpoint = "order/activity?pageSize=1&pageNumber=1"
     order_api = Api(api_endpoint)
     result = order_api.get_request()

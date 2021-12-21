@@ -9,5 +9,6 @@ def test_get_coupon_by_id():
     coupon_id_endpoint = "coupon/{}".format(invalid_coupon_id)
     coupon_api = Api(coupon_id_endpoint)
     result = coupon_api.get_request(headers=headers_with_token)
-    status_code = result['status_code']
-    assert status_code == 500
+    message = result['response']['message']
+
+    assert message == 'Internal server error'

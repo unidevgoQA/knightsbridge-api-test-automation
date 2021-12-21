@@ -8,5 +8,5 @@ from test_data.headers import admin_headers_with_token
 def test_not_create_promotion_with_get_request():
     promotion_api = Api("promotion/create")
     result = promotion_api.get_request(payload=new_promotion_data, headers=admin_headers_with_token)
-    status_code = result['status_code']
-    assert status_code == 500
+    message = result['response']['message']
+    assert message == "Internal server error"

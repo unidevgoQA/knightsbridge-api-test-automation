@@ -10,6 +10,6 @@ def test_coupon_get_all_valid():
                                                                                    coupon_get_all_params['pageNumber'],
                                                                                    coupon_get_all_params['search'])
     coupon_api = Api(coupon_type_endpoint)
-    result = coupon_api.delete_request(admin_headers_with_token)
-    status_code = result['status_code']
-    assert status_code == 500
+    result = coupon_api.delete_request(headers=admin_headers_with_token)
+    message = result['response']['message']
+    assert message == 'Internal server error'
