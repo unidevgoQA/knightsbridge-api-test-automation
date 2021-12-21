@@ -6,7 +6,7 @@ from utils.read_update_counter import read_and_update_counter
 
 report_folder_name = f"{read_date()}_{read_and_update_counter()}"
 # running testCases
-command = f"py.test -s --alluredir=report_allure/{report_folder_name} " \
+command = f"pytest -s --alluredir=report_allure/{report_folder_name} " \
           f"--html=report_html/report_{report_folder_name}.html --self-contained-html tests"
 os.system(command)
 
