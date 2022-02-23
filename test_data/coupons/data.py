@@ -8,14 +8,14 @@ random_coupon_id = choice(result['response']['data'])['_id']
 
 new_coupon = {
   "discountPercentage": 0,
-  "title": "Test Coupon",
+  "title": "Automation",
 
   "startDate": "2019-09-07",
   "endDate": "2020-09-07",
   "forAllCoins": True,
   "coinId": "111",
   "image": "https://www.cryptocompare.com/media/12318076/xrp.png",
-  "code": "TC111",
+  "code": "A1215",
   "noOfReedem": 0
 }
 
