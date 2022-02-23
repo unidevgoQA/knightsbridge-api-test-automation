@@ -13,6 +13,7 @@ from test_data.reward.rank_data.data import new_rank_empty_name, \
     new_rank_empty_avatar
 
 reward_create_api = Api("reward/create")
+rank_by_id_api = Api("reward/rank/{}")
 
 
 @allure.step("Validate user is able to create reward successfully")
@@ -200,3 +201,66 @@ def test_create_rank_empty_avatar():
     assert status_code == 400
 
 
+@allure.step("Validate user is not able to create rank with with get request")
+def test_create_rank_with_get():
+    rank_api = Api("reward/rank")
+    result = rank_api.get_request(headers=admin_headers_with_token)
+    status = result['response']['status']
+    assert status == 'error'
+
+
+@allure.step("Validate user is able to retrieve a rank with id")
+def test_get_rank_by_id():
+    rank_create_api = Api("reward/rank")
+    result = rank_create_api.post_request(new_rank, headers=admin_headers_with_token)
+    status_code = result['status_code']
+    assert status_code == 201
+    reward_id = result['response']['data']['_id']
+    rank_api = Api("reward/rank/{}".format(reward_id))
+    result = rank_api.get_request(headers=admin_headers_with_token)
+    status_code = result['status_code']
+    assert status_code == 200
+
+
+@allure.step("Validate user is able to update a rank with id")
+def test_update_rank_by_id():
+    rank_create_api = Api("reward/rank")
+    result = rank_create_api.post_request(new_rank, headers=admin_headers_with_token)
+    status_code = result['status_code']
+    assert status_code == 201
+    reward_id = result['response']['data']['_id']
+    rank_api = Api("reward/rank/{}".format(reward_id))
+    result = rank_api.put_request(new_rank, headers=admin_headers_with_token)
+    status_code = result['status_code']
+    assert status_code == 200
+
+
+@allure.step("Validate user is able to delete a rank with id")
+def test_delete_rank_by_id():
+    rank_create_api = Api("reward/rank")
+    result = rank_create_api.post_request(new_rank, headers=admin_headers_with_token)
+    status_code = result['status_code']
+    assert status_code == 201
+    reward_id = result['response']['data']['_id']
+    rank_api = Api("reward/rank/{}".format(reward_id))
+    result = rank_api.delete_request(headers=admin_headers_with_token)
+    status_code = result['status_code']
+    assert status_code == 200
+
+
+@allure.step("Validate user is able to retrieve all ranks")
+def test_get_all_ranks():
+    api = Api("reward/ranksAll/getAllRanks")
+    result = api.get_request(headers=admin_headers_with_token)
+    status_code = result['status_code']
+    assert status_code == 200
+    message = result['response']['message']
+    assert message == 'Ranks retrieved successfully'
+
+
+@allure.step("Validate user is not able to retrieve all ranks with POST request")
+def test_get_all_ranks_with_post():
+    api = Api("reward/ranksAll/getAllRanks")
+    result = api.post_request(headers=admin_headers_with_token)
+    status_code = result['status_code']
+    assert status_code == 404
