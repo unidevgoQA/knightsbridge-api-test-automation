@@ -66,3 +66,6 @@ new_reward_no_events = {
   "startDate": "2022-02-22T12:37:24.021Z",
   "endDate": "2022-02-22T12:37:24.021Z",
 }
+
+invalid_reward_id = "hojoborolo12345"
+
