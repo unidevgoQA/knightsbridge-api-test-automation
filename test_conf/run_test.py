@@ -8,7 +8,7 @@ from utils.read_update_counter import read_and_update_counter
 report_folder_name = f"{read_date()}_{read_and_update_counter()}"
 
 command = f"pytest -s --alluredir=report_allure/{report_folder_name} " \
-          f"--html=report_html/report_{report_folder_name}.html --self-contained-html tests"
+          f"--html=report_html/report_{report_folder_name}.html --self-contained-html tests/coupons"
 subprocess.run(command, shell=True)
 
 # generating report from json files
