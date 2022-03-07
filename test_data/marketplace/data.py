@@ -4,7 +4,6 @@ from test_data.headers import admin_headers_with_token
 
 api = Api('marketplace/')
 result = api.get_request(headers=admin_headers_with_token)
-random_nft_id = choice(result['response']['data'])['_id']
 
 new_nft = {
   "image": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg",
@@ -13,7 +12,7 @@ new_nft = {
   "price": 90,
   "quantity": 23,
   "category": "art",
-  "tokenId": "39153bc5821105e760239378",
+  "tokenId": "39153bvvv21105e760239378",
   "contractAddress": "0x226f9h6786811",
   "tokenStandard": "ERC-115",
   "blockchain": "Ethereum",
@@ -50,7 +49,7 @@ nft_invalid_id_to_update = "5465489846516489485"
 nft_to_search = "Test NFT"
 
 nft_get_by_id = {
-  "id": "62146fb557c6fb00234bf15e"
+  "id": "622591add934ed0023c475e2"
 }
 
 nft_delete_by_id = {
@@ -382,8 +381,112 @@ nft_create_except_isSold = {
   "isVisibleInMarketplace": True
 }
 
+# NFT Group
+nft_create_group = {
+  "icon": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg",
+  "banner": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg",
+  "name": "Brand-X",
+  "category": "Photography",
+  "description": "This is group description"
+}
+
+nft_create_group_only_icon = {
+  "icon": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg"
+}
+
+nft_create_group_only_banner = {
+  "banner": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg"
+}
+
+nft_create_group_only_name = {
+  "banner": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg"
+}
+
+nft_create_group_only_category = {
+  "category": "Photography"
+}
+
+nft_create_group_only_description = {
+  "description": "This is group description"
+}
+
+nft_create_group_except_icon = {
+  "banner": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg",
+  "name": "Brand-X",
+  "category": "Photography",
+  "description": "This is group description"
+}
+
+nft_create_group_except_name = {
+  "icon": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg",
+  "banner": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg",
+  "category": "Photography",
+  "description": "This is group description"
+}
+
+nft_create_group_except_category = {
+  "icon": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg",
+  "banner": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg",
+  "name": "Brand-X",
+  "description": "This is group description"
+}
+
+nft_create_group_except_description = {
+  "icon": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg",
+  "banner": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg",
+  "name": "Brand-X",
+  "category": "Photography"
+}
+
+nft_buy = {
+  "id": "6225915ad934ed0023c475cf",
+  "userId": "61aa18ee7f07a4de38caddbb"
+}
+
+nft_buy_invalid_id = {
+  "id": "621f52f7002asdfd480c77b",
+  "userId": "61b090975ce0ccf7a70732f1"
+}
+
+nft_buy_invalid_userId = {
+  "id": "621f5204db58f7002480c77b",
+  "userId": "5446465748684"
+}
+
+get_nft_customer = {
+  "pageSize" : 1,
+  "pageNumber" : 1,
+  "minPrice" : 0,
+  "maxPrice" : 1200,
+  "Category" : "Photography"
+}
 
 
 
+nft_group_id = "6222192d125c1300274d79f0"
+nft_group_invalid_id = "iahfidhahfudashdfhds454"
 
+nft_group_update = {
+  "icon": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg",
+  "banner": "https://storage.knights.app/kb-promotions-development/267280fee44981ea9619689f80c07672.jpg",
+  "name": "Update Group NFT",
+  "category": "Photography",
+  "description": "This is Update asdf description"
+}
 
+nft_group_delete = "6221f1c909efa500238b298e"
+
+nft_group_get_data_by_id = "62221944125c1300274d79f4"
+
+nft_wallet_create = {
+  "userId": "61b090975ce0ccf7a70732f1",
+  "nftId": "6225915ad934ed0023c475cf",
+  "price": 80,
+  "quantity": 1,
+  "blockchain": "61c388789d24d9004090ee26"
+}
+
+nft_wallet_all = {
+  "userId": "61b090975ce0ccf7a70732f1",
+  "nftId": "62259056d934ed0023c475a2"
+}

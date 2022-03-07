@@ -45,6 +45,15 @@ coupon_get_all_params = {
   "search": "Test coupon"
 }
 
+
+use_new_coupon = {
+  "coinId": "111",
+  "userId": "string",
+  "couponId": "6214d5798c300600230ddbbd",
+  "orderId": "dadsfsd",
+  "redeemDate": "2020-09-07"
+}
+
 coupon_get_by_id = {
   "id": "1"
 }
