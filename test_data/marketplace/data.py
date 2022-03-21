@@ -490,3 +490,23 @@ nft_wallet_all = {
   "userId": "61b090975ce0ccf7a70732f1",
   "nftId": "62259056d934ed0023c475a2"
 }
+
+nft_bid_place = {
+  "nftId": "62343f4eeffff200238a5841",
+  "userId": "61aa18ee7f07a4de38caddbb",
+  "bidPrice": 160
+}
+
+nft_bid_place_with_only_nftId = {
+  "nftId": "62343f4eeffff200238a5841"
+}
+
+nft_bid_place_with_only_userId = {
+  "userId": "61aa18ee7f07a4de38caddbb"
+}
+
+nft_bid_place_with_only_bidPrice = {
+  "bidPrice": 130
+}
+
+nft_highest_bid = "62343f4eeffff200238a5841"
